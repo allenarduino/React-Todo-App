@@ -1,5 +1,3 @@
-import uuid from "uuid/v1";
-
 export const taskReducer = (state, action) => {
   switch (action.type) {
     case "ADD_TASK": {
