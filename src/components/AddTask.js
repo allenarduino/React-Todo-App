@@ -2,7 +2,7 @@ import React from "react";
 import Grid from "@material-ui/core/Grid";
 import TextField from "@material-ui/core/TextField";
 import { TaskContext } from "../contexts/TaskContextProvider";
-const uuid = require("uuid");
+const { v4: uuidv4 } = require("uuid");
 
 const AddTask = () => {
   const { dispatch } = React.useContext(TaskContext);
@@ -13,7 +13,7 @@ const AddTask = () => {
     dispatch({
       type: "ADD_TASK",
       payload: {
-        id: uuid(),
+        id: uuidv4(),
         isChecked: false,
         created: new Date(),
         description: description

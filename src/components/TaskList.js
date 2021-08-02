@@ -10,7 +10,7 @@ import {
 import CropFreeIcon from "@material-ui/icons/CropFree";
 import LibraryAddCheckIcon from "@material-ui/icons/LibraryAddCheck";
 import { TaskContext } from "../contexts/TaskContextProvider";
-
+import DeleteOutlineIcon from "@material-ui/icons/DeleteOutline";
 const useStyles = makeStyles(theme => ({
   root: {
     width: "100%",
@@ -66,7 +66,9 @@ const TaskList = () => {
                     id: task.id
                   });
                 }}
-              ></IconButton>
+              >
+                <DeleteOutlineIcon />
+              </IconButton>
             </ListItemSecondaryAction>
           </ListItem>
         );
